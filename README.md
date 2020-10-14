@@ -53,7 +53,7 @@
 * Register with FirstName equals LastName
 * Register with Invalid Mobile Number
 * Register with Invalid Email
-* Register with Tnvalid Password
+* Register with Invalid Password
 
 ## Running test Cases
 To run all test cases, navigate to `AutomationTesting` directory and run:<br />
