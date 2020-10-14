@@ -43,8 +43,25 @@
 
 
 ## Test Cases
+* Register with all valid Inputs and verify login
+* Register with Invalid FirstName
+* Register with Invalid LastName
+* Register with FirstName equals LastName
+* Register with Invalid Mobile Number
+* Register with Invalid Email
+* Register with Tnvalid Password
 
 ## Running test Cases
+To run all test cases, navigate to `AutomationTesting` directory and run:<br />
+`pytest -v -s --alluredir=[Reports dir path] testCases` <br />
 
 ## Reporting
+After running all testCases json and png files will be included in Reports directory to displlay them go to command prompt and run:<br />
+`allure serve "[Reports dir path]"` this will generate the reports to a directory and opens browser showing all test cases and their results<br />
+<br />
+Because allure report isn't a simple web page and can't be export to single HTML file so to share the report we can Use 
+`netlify.com` web site then drop the allure-report directory then it will generate a link to the Report <br />
+The Link : https://agitated-mcclintock-060684.netlify.app/
+
+
 
