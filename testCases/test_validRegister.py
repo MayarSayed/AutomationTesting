@@ -15,8 +15,8 @@ class Test_Valid_Registration:
     email     = Requirement.getValidEmail()
     password  = Requirement.getValidPassword()
 
-    def testSignUp(self):
-        self.driver = webdriver.Firefox(executable_path="Drivers\\geckodriver.exe")
+    def testSignUp(self,setUp):
+        self.driver = setUp
         self.driver.get(ReadConfig.getRegisterPageURL())
         Rp = RegisterPage(self.driver)
 
@@ -40,8 +40,8 @@ class Test_Valid_Registration:
             self.driver.close()
             assert False
 
-    def testLogin(self):
-        self.driver = webdriver.Firefox(executable_path="Drivers\\geckodriver.exe")
+    def testLogin(self,setUp):
+        self.driver = setUp
         self.driver.get(ReadConfig.getLoginPageURL())
         loginp = LoginPage(self.driver)
         loginp.setUserName(self.email)

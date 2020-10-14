@@ -16,8 +16,8 @@ class Test_Invalid_Password:
     email     = Requirement.getValidEmail()
     password  = Requirement.getInValidPasswordValue()
 
-    def testSignUp(self):
-        self.driver = webdriver.Firefox(executable_path="Drivers\\geckodriver.exe")
+    def testSignUp(self,setUp):
+        self.driver = setUp
         self.driver.get(ReadConfig.getRegisterPageURL())
         regPage = RegisterPage(self.driver)
 

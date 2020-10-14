@@ -2,12 +2,12 @@ from Locators.locators import Locators
 
 class RegisterPage():
     textbox_firstname_Name = Locators.textbox_firstname_Name
-    textbox_lastname_Name = Locators.textbox_lastname_Name
+    textbox_lastname_Name  = Locators.textbox_lastname_Name
     textbox_mobileNum_Name = Locators.textbox_mobileNum_Name
-    textbox_email_Name= Locators.textbox_email_Name
-    textbox_password_Name= Locators.textbox_password_Name
+    textbox_email_Name     = Locators.textbox_email_Name
+    textbox_password_Name  = Locators.textbox_password_Name
     textbox_confirmpassword_Name= Locators.textbox_confirmpassword_Name
-    button_signUp_xpath = Locators.button_signUp_xpath
+    button_signUp_xpath    = Locators.button_signUp_xpath
     
     def __init__(self,driver):
         self.driver= driver
@@ -32,5 +32,4 @@ class RegisterPage():
     
     def clickSignUp(self):
         self.driver.find_element_by_xpath(self.button_signUp_xpath).click()
-    
     

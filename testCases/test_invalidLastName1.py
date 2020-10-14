@@ -16,8 +16,8 @@ class Test_Invalid_Lastname:
     email     = Requirement.getValidEmail()
     password  = Requirement.getValidPassword()
 
-    def testURL(self):
-        self.driver = webdriver.Firefox(executable_path="Drivers\\geckodriver.exe")
+    def testURL(self,setUp):
+        self.driver = setUp
         self.driver.get(ReadConfig.getRegisterPageURL())
         currentUrl = self.driver.current_url
         self.driver.close()
@@ -26,8 +26,8 @@ class Test_Invalid_Lastname:
         else:
             assert False
 
-    def testSignUp(self):
-        self.driver = webdriver.Firefox(executable_path="Drivers\\geckodriver.exe")
+    def testSignUp(self,setUp):
+        self.driver = setUp
         self.driver.get(ReadConfig.getRegisterPageURL())
         regPage = RegisterPage(self.driver)
 
